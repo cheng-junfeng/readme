@@ -1,0 +1,20 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.webview" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application>
+        <activity android:name=".ui.WebViewNormalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <!--<data android:mimeType="application/msword"/>-->
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

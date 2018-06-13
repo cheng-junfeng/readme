@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="base_default">#9EADC6</color>
+    <color name="base_light_default">#5B77A6</color>
+    <color name="base_toolbar_color">#9EADC6</color>
+
+    <color name="color_gray">#E5E5E5</color>
+    <color name="color_light_white">#FFFFFF</color>
+    <color name="color_alpha_light_black">#7F333333</color>
+</resources>
