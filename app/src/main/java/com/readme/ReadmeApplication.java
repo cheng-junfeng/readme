@@ -8,7 +8,7 @@ import android.support.multidex.MultiDexApplication;
 import com.base.config.GlobalConfig;
 import com.blankj.utilcode.util.Utils;
 import com.base.utils.LogUtil;
-import com.readme.ui.upgrade.UpgradeActvity;
+import com.readme.ui.module.upgrade.UpgradeActvity;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
 import com.tencent.bugly.beta.UpgradeInfo;

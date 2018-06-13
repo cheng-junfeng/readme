@@ -1,5 +1,6 @@
 package com.readme.app.activity;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import butterknife.Unbinder;
 
 public abstract class BaseCompatFragment extends BaseAppCompatFragment {
 
+    protected Uri myUri;
     Unbinder unbinder;
 
     @Override
@@ -23,6 +25,10 @@ public abstract class BaseCompatFragment extends BaseAppCompatFragment {
     }
 
     protected abstract int setContentView();
+
+    public void setUri(Uri uri){
+        this.myUri = uri;
+    }
 
     @Override
     public void onDestroy() {

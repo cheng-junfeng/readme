@@ -39,29 +39,32 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ui.main.GuideActivity"
+        <activity android:name=".ui.module.main.GuideActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ui.scan.ScanActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.file.FileActivity"
+        <activity android:name=".ui.module.ReadActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="file" />
                 <data android:scheme="content" />
-                <data android:mimeType="text/*" />
+                <!--这个很重要,不然会拦截不到http请求-->
+                <data android:scheme="http" android:host="*" />
+                <data android:mimeType="*/*" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.file.FileListActivity"
+
+        <activity android:name=".ui.module.scan.ScanActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".ui.upgrade.UpgradeActvity"
+        <activity android:name=".ui.module.file.FileListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.module.upgrade.UpgradeActvity"
             android:screenOrientation="portrait"
             android:theme="@style/Dialog"/>
 
