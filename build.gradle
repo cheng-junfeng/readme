@@ -33,7 +33,6 @@ ext {
     minSdkVersion = 18
     targetSdkVersion = 25
     applicationId = "com.readme"
-    packageNam = "\"com.readme\""
 
     appcompatVer = '26.1.0'
     butterKnifeVer = '8.5.1'

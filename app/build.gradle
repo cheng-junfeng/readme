@@ -15,9 +15,6 @@ android {
         multiDexEnabled true
         manifestPlaceholders = [APP_ID: rootProject.ext.applicationId]
     }
-    packagingOptions {
-        pickFirst 'META-INF/*'
-    }
     buildTypes {
         release {
             minifyEnabled false
