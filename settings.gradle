@@ -1,1 +1,1 @@
-include ':app', ':zxinglib', ':webviewlib', ':hintlib', ':customlib', ':baselib'
+include ':app', ':zxinglib', ':webviewlib', ':hintlib', ':baselib'

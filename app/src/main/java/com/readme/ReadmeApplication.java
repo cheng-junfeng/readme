@@ -6,7 +6,6 @@ import android.os.Environment;
 import android.support.multidex.MultiDexApplication;
 
 import com.base.config.GlobalConfig;
-import com.blankj.utilcode.util.Utils;
 import com.base.utils.LogUtil;
 import com.readme.ui.module.upgrade.UpgradeActvity;
 import com.tencent.bugly.Bugly;
@@ -35,8 +34,6 @@ public class ReadmeApplication extends MultiDexApplication {
         instance = this;
         LogUtil.d(TAG, "onCreate");
 
-        //util
-        Utils.init(mContext);
         //upgrade
         initUpgrade();
     }

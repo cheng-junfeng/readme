@@ -4,6 +4,7 @@ package com.base.app.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,12 +12,11 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 
-import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 import com.base.R;
 import com.base.app.listener.OnRetryListener;
 
 
-public abstract class BaseAppCompatActivity extends RxAppCompatActivity {
+public abstract class BaseAppCompatActivity extends AppCompatActivity {
 
     protected Toolbar toolbar;
     protected FrameLayout body_view;
@@ -143,14 +143,5 @@ public abstract class BaseAppCompatActivity extends RxAppCompatActivity {
     protected void readGoFinish(Class<?> cls, Bundle bundle){
         readGo(cls, bundle);
         finish();
-    }
-
-    protected void readGoFinishAnim(Class<?> cls){
-        readGoFinishAnim(cls, null);
-    }
-
-    protected void readGoFinishAnim(Class<?> cls, Bundle bundle){
-        readGoFinish(cls, bundle);
-        overridePendingTransition(R.anim.screen_zoom_in, R.anim.screen_zoom_out);
     }
 }

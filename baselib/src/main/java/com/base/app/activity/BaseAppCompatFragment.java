@@ -3,17 +3,17 @@ package com.base.app.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatDialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.trello.rxlifecycle2.components.support.RxAppCompatDialogFragment;
 import com.base.R;
 import com.base.app.listener.OnRetryListener;
 
-public abstract class BaseAppCompatFragment extends RxAppCompatDialogFragment {
+public abstract class BaseAppCompatFragment extends AppCompatDialogFragment {
 
     protected  FrameLayout frameBody_view;
     protected View frameMainView;

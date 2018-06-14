@@ -9,7 +9,7 @@ import com.base.utils.FileUtil;
 import com.base.utils.TimeUtil;
 
 import com.readme.R;
-import com.readme.app.activity.BaseCompatActivity;
+import com.readme.app.activity.BaseActivity;
 import com.tencent.bugly.beta.Beta;
 import com.tencent.bugly.beta.download.DownloadListener;
 import com.tencent.bugly.beta.download.DownloadTask;
@@ -18,7 +18,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 
-public class UpgradeActvity extends BaseCompatActivity {
+public class UpgradeActvity extends BaseActivity {
 
     @BindView(R.id.dialog_title)
     TextView title;

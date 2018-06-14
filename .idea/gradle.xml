@@ -10,7 +10,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/baselib" />
-            <option value="$PROJECT_DIR$/customlib" />
             <option value="$PROJECT_DIR$/hintlib" />
             <option value="$PROJECT_DIR$/webviewlib" />
             <option value="$PROJECT_DIR$/zxinglib" />
