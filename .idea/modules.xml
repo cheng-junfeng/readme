@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/audio/audio.iml" filepath="$PROJECT_DIR$/audio/audio.iml" />
       <module fileurl="file://$PROJECT_DIR$/baselib/baselib.iml" filepath="$PROJECT_DIR$/baselib/baselib.iml" />
       <module fileurl="file://$PROJECT_DIR$/customlib/customlib.iml" filepath="$PROJECT_DIR$/customlib/customlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/hintlib/hintlib.iml" filepath="$PROJECT_DIR$/hintlib/hintlib.iml" />

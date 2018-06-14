@@ -7,8 +7,7 @@ public enum Types {
     image,
     video,
     audio,
-    pdf,
-    msword;
+    pdf;
 
     public static Types value(String type){
         if(TextUtils.isEmpty(type)){
@@ -17,16 +16,14 @@ public enum Types {
 
         if(type.startsWith(text.name())){
             return text;
-        }else if(type.startsWith(image.name())){
+        }else if(type.contains(image.name())){
             return image;
-        }else if(type.startsWith(video.name())){
+        }else if(type.contains(video.name())){
             return video;
-        }else if(type.startsWith(audio.name())){
+        }else if(type.contains(audio.name())){
             return audio;
-        }else if(type.startsWith("application/pdf")){
+        }else if(type.contains(pdf.name())){
             return pdf;
-        }else if(type.startsWith("application/msword")){
-            return msword;
         }
         return text;
     }

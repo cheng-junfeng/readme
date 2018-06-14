@@ -115,7 +115,7 @@ public class ScanActivity extends BaseCompatActivity {
         }, 1000);
 
         List<String> allStr = new ArrayList<String>();
-        allStr.add("Copy to the plate");
+        allStr.add("Copy");
         allStr.add("Open webview");
         allStr.add("Share");
         DialogUtils.showChooseDialog(this, allStr, new OnChooseListener() {

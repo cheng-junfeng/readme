@@ -15,9 +15,11 @@ import android.widget.TextView;
 import com.base.utils.FileUtil;
 import com.readme.R;
 import com.readme.config.Extra;
+import com.readme.config.Types;
 import com.readme.ui.module.ReadActivity;
 import com.readme.ui.module.file.bean.FileInfo;
 import com.readme.ui.module.file.FileListActivity;
+import com.readme.utils.TypesUtils;
 
 
 import java.util.List;
@@ -85,11 +87,7 @@ public class FileListAdapter extends BaseAdapter {
             holder.tvLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Uri uri = Uri.parse(appInfo.appPath);
-
-                    Intent intent = new Intent(context, ReadActivity.class);
-                    intent.setDataAndType(uri, "text/plain");
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    Intent intent = TypesUtils.openFile(appInfo.appPath);
                     context.startActivity(intent);
                 }
             });

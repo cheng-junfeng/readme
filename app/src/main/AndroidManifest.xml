@@ -52,6 +52,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="${APP_ID}" />
                 <data android:scheme="file" />
                 <data android:scheme="content" />
                 <!--这个很重要,不然会拦截不到http请求-->

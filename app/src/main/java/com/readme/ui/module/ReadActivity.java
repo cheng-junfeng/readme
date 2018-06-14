@@ -14,7 +14,7 @@ import com.readme.config.Types;
 import com.readme.ui.module.fragment.BaseFragmentFactory;
 
 public class ReadActivity extends BaseCompatActivity {
-    private final static String TAG = "GuideActivity";
+    private final static String TAG = "ReadActivity";
     @Override
     protected boolean setToolbar() {
         return false;
@@ -32,6 +32,7 @@ public class ReadActivity extends BaseCompatActivity {
         if(intent != null){
             Uri theUri = intent.getData();
             String theType = intent.getType();
+            LogUtil.d(TAG, "uri"+theUri+":"+theType);
             initView(theUri, theType);
         }else{
             LogUtil.d(TAG, "intent:null");
@@ -55,11 +56,5 @@ public class ReadActivity extends BaseCompatActivity {
     @Override
     public void onBackPressed() {
         finish();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        appExit();
     }
 }

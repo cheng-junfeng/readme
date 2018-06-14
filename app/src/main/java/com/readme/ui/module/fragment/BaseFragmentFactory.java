@@ -9,8 +9,8 @@ public class BaseFragmentFactory {
     private TextFragment mTextFragment;
     private ImageFragment mImageFragment;
     private VideoFragment mVideoFragment;
+    private AudioFragment mAudioFragment;
     private PdfFragment mPdfFragment;
-    private WordFragment mWordFragment;
 
     private BaseFragmentFactory() {
     }
@@ -59,6 +59,17 @@ public class BaseFragmentFactory {
         return mVideoFragment;
     }
 
+    private BaseCompatFragment getAudioFragment() {
+        if (mAudioFragment == null) {
+            synchronized (BaseFragmentFactory.class) {
+                if (mAudioFragment == null) {
+                    mAudioFragment = new AudioFragment();
+                }
+            }
+        }
+        return mAudioFragment;
+    }
+
     private BaseCompatFragment getPdfFragment() {
         if (mPdfFragment == null) {
             synchronized (BaseFragmentFactory.class) {
@@ -68,17 +79,6 @@ public class BaseFragmentFactory {
             }
         }
         return mPdfFragment;
-    }
-
-    private BaseCompatFragment getWordFragment() {
-        if (mWordFragment == null) {
-            synchronized (BaseFragmentFactory.class) {
-                if (mWordFragment == null) {
-                    mWordFragment = new WordFragment();
-                }
-            }
-        }
-        return mWordFragment;
     }
 
     public BaseCompatFragment getFragment(Types type) {
@@ -94,13 +94,10 @@ public class BaseFragmentFactory {
                 fragment = getVideoFragment();
                 break;
             case audio:
-                fragment = getTextFragment();
+                fragment = getAudioFragment();
                 break;
             case pdf:
                 fragment = getPdfFragment();
-                break;
-            case msword:
-                fragment = getWordFragment();
                 break;
         }
         return fragment;

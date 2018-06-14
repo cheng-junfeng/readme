@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:background="@drawable/record_microphone_bj"
+        android:background="@drawable/loading_shape_bg"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:orientation="vertical"
+        android:layout_gravity="center"
         android:gravity="center"
         android:paddingTop="20dip"
         android:paddingBottom="16dp"
@@ -29,17 +31,6 @@
             android:textColor="#FFFFFF"
             android:gravity="center"
             android:textSize="16sp"
-            android:text="00:00" />
-
-        <TextView
-            android:id="@+id/tv_recording_title"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_width="wrap_content"
-            android:textColor="#FFFFFF"
-            android:gravity="center"
-            android:textSize="15sp"
-            android:text="向上滑动,取消录音" />
+            android:text="music" />
     </LinearLayout>
-
 </LinearLayout>

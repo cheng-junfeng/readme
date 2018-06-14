@@ -7,6 +7,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +41,11 @@ public class FileUtil {
     }
 
     public static String getFileContent(String path) {
-        File thisFile = new File(path);
+        File thisFile = null;
+        try{
+            thisFile = new File(new URI(path));
+        }catch (URISyntaxException e){
+        }
 
         String content;
         StringBuffer strBuff = new StringBuffer();
